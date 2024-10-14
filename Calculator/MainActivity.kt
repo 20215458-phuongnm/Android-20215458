@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setOperatorButtonListeners()
     }
 
-    // Gán sự kiện cho các nút số
+  
     private fun setNumberButtonListeners() {
         val numberButtons = listOf(
             R.id.button0, R.id.button1, R.id.button2, R.id.button3,
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Gán sự kiện cho các nút toán tử
+
     private fun setOperatorButtonListeners() {
         val operatorButtons = listOf(
             R.id.buttonPlus, R.id.buttonMinus, R.id.buttonMultiply, R.id.buttonDivide
@@ -57,7 +57,6 @@ class MainActivity : AppCompatActivity() {
             findViewById<Button>(id).setOnClickListener { operatorListener(it as Button) }
         }
 
-        // Xử lý nút "="
         findViewById<Button>(R.id.buttonEquals).setOnClickListener {
             if (currentInput.isNotEmpty()) {
                 val secondNumber = currentInput.toDouble()
@@ -67,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Xử lý nút "C" để xóa hết
+     
         findViewById<Button>(R.id.buttonClear).setOnClickListener {
             currentInput = ""
             firstNumber = 0.0
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             display.text = "0"
         }
 
-        // Xử lý nút "BS" (Backspace)
+     
         findViewById<Button>(R.id.buttonBackspace).setOnClickListener {
             if (currentInput.isNotEmpty()) {
                 currentInput = currentInput.dropLast(1)
