@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gmailclone.Email
 import com.example.gmailclone.R
 
+
 class EmailAdapter(
     private val context: Context,
     private val emailList: List<Email>
@@ -30,6 +31,7 @@ class EmailAdapter(
         val email = emailList[position]
         holder.senderIcon.text = email.senderIcon
         holder.senderName.text = email.senderName
+        holder.senderIcon.setBackgroundColor(email.color)
         holder.emailSubject.text = email.subject
         holder.emailTime.text = email.time
         holder.starIcon.setImageResource(if (email.isStarred) R.drawable.star else R.drawable.star_border)

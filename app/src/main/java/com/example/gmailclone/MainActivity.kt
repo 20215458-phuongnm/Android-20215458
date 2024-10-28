@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.graphics.Color
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,17 +20,29 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val colors = listOf(
+            Color.parseColor("#F44336"),
+            Color.parseColor("#E91E63"),
+            Color.parseColor("#9C27B0"),
+            Color.parseColor("#3F51B5"),
+            Color.parseColor("#2196F3"),
+            Color.parseColor("#4CAF50"),
+            Color.parseColor("#FF9800"),
+            Color.parseColor("#795548"),
+            Color.parseColor("#607D8B")
+        )
+
         val emailList = listOf(
-            Email("E", "John Doe", "Meeting reminder for upcoming project discussion about timelines and deliverables", "10:30 AM", false),
-            Email("A", "Alice Smith", "Project update: Detailed Phase 2 requirements and timeline adjustments based on feedback", "Yesterday", true),
-            Email("B", "Bob Lee", "Dinner plans with the team at the new restaurant downtown to celebrate project completion", "12:45 PM", false),
-            Email("J", "Jessica Wong", "Budget review for Q3 financial planning meeting, including expense projections", "9:00 AM", true),
-            Email("M", "Michael Tan", "Follow-up on last week's brainstorming session on upcoming project ideas", "11:15 AM", false),
-            Email("R", "Rachel Green", "Invoice details for recent purchases and expenses, including itemized breakdown", "Monday", true),
-            Email("S", "Simon Lee", "Invitation to the annual tech conference next month for networking and presentations", "Tuesday", false),
-            Email("D", "David Kim", "Final approval needed for the client proposal document with all recent edits", "2:30 PM", false),
-            Email("L", "Laura Adams", "Reminder: Team building event this Friday afternoon with planned activities", "Wednesday", true),
-            Email("C", "Chris Brown", "Code review and feedback on the latest project update from the development team", "Yesterday", false)
+            Email("A", "Nguyễn An", "Lịch họp về dự án mới và cập nhật các công việc cần hoàn thành", "10:30 AM", false, colors.random()),
+            Email("B", "Bích Hằng", "Báo cáo tiến độ: Chi tiết các yêu cầu Giai đoạn 2 và điều chỉnh kế hoạch", "Hôm qua", true, colors.random()),
+            Email("T", "Trung Kiên", "Kế hoạch ăn tối với nhóm tại nhà hàng mới để kỷ niệm hoàn thành dự án", "12:45 PM", false, colors.random()),
+            Email("M", "Minh Hòa", "Dự toán ngân sách cho cuộc họp tài chính quý 3, bao gồm các khoản chi dự kiến", "9:00 AM", true, colors.random()),
+            Email("L", "Linh Phương", "Theo dõi buổi brainstorming tuần trước về các ý tưởng dự án sắp tới", "11:15 AM", false, colors.random()),
+            Email("H", "Huyền Trang", "Chi tiết hóa đơn cho các chi phí gần đây, bao gồm các khoản mục chi tiết", "Thứ Hai", true, colors.random()),
+            Email("D", "Đức Long", "Thư mời tham gia hội nghị công nghệ hàng năm vào tháng sau", "Thứ Ba", false, colors.random()),
+            Email("K", "Khánh Duy", "Cần phê duyệt cuối cùng cho tài liệu đề xuất gửi khách hàng sau các chỉnh sửa", "2:30 PM", false, colors.random()),
+            Email("V", "Vân Anh", "Nhắc nhở: Sự kiện team building vào chiều thứ Sáu với các hoạt động đã được lên kế hoạch", "Thứ Tư", true, colors.random()),
+            Email("P", "Phương Nam", "Xem lại mã và góp ý cho bản cập nhật dự án mới nhất từ nhóm phát triển", "Hôm qua", false, colors.random())
         )
 
         emailAdapter = EmailAdapter(this, emailList)

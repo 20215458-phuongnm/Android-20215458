@@ -10,7 +10,6 @@
         android:id="@+id/senderIcon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:backgroundTint="#2196F3"
         android:background="@drawable/circle_background"
         android:text="E"
         android:textColor="#FFFFFF"

@@ -5,5 +5,6 @@ data class Email(
     val senderName: String,
     val subject: String,
     val time: String,
-    val isStarred: Boolean
+    val isStarred: Boolean,
+    val color: Int
 )
