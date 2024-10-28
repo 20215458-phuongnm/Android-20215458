@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Sender's icon or initial -->
+    <TextView
+        android:id="@+id/senderIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#2196F3"
+        android:background="@drawable/circle_background"
+        android:text="E"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <!-- Sender's name and email subject -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/starIcon"
+        android:layout_toEndOf="@id/senderIcon"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/senderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sender Name"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/emailSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Email subject goes here"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Time or date of the email -->
+    <TextView
+        android:id="@+id/emailTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:34 PM"
+        android:textColor="#757575"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Star icon to mark as favorite -->
+    <ImageView
+        android:id="@+id/starIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/emailTime"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/star_border"
+        app:tint="#757575" />
+</RelativeLayout>
