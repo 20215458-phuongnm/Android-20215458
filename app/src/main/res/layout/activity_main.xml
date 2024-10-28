@@ -27,19 +27,20 @@
         <!-- Title -->
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
+            android:layout_weight="1"
             android:text="Inbox"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <!-- Profile Icon -->
+        <!-- Search Icon on the Right -->
         <ImageView
             android:id="@+id/search_icon"
-            android:layout_width="519dp"
+            android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_search"
